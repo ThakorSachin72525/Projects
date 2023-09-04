@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("/img/bg.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.top{
+    height: 600px;
+    width: 500px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 10px;
+}
+.one{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: black;
+    margin-top: 15px;
+    font-size: x-large;
+    font-weight: 900;
+}
+.onep{
+    margin-left: 15px;
+}
+.hr{
+    border-top: 1px solid black;
+    margin-top: 15px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.names{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+}
+.firstname{
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border-style: groove;
+    width: 60%;
+}
+.surname{
+    width: 60%;
+    border-radius: 5px;
+    border-style: groove;
+    padding: 3px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.email{
+    border-radius: 5px;
+    border-style: groove;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 8px;
+    width: 92%;
+    padding: 5px;
+}
+.password{
+    border-radius: 5px;
+    border-style: groove;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 8px;
+    width: 92%;
+    padding: 5px;
+}
+
+.dobt{
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.DOB{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+#day, #month, #year{
+    width: 30%;
+    padding: 7px;
+}
+
+.dobg{
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.gender{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+.female{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    width: 29%;
+        border-radius: 5px;
+    border-style: groove;
+}
+.male{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    width: 29%;
+        border-radius: 5px;
+    border-style: groove;
+}
+.custom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    width: 29%;
+    border-radius: 5px;
+    border-style: groove;
+}
+.lastt{
+    font-size: x-small;
+    margin: 15px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn button {
+    background-color: #00a400;
+    width: 40%;
+    color: white;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 8px;
+    border-style: solid;
+}
+.btnsignup{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
