@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Spotify_Clone</title>
+    <link rel="stylesheet" href="/assets/index-42b18d95.css">
+  </head>
+  <body class="bg-black flex flex-col m-0 p-0">
+    <nav class="text-white">
+      <ul class="flex space-x-5 items-center h-[50px] bg-black">
+        <li class="brand font-extrabold flex items-center">
+          <img class="p-1 w-11" src="/assets/logo-d396a4d6.png" alt="Spotify" />Spotify
+        </li>
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <div class="container flex items-center justify-evenly p-6 bg-opacity-50 md:bg-[url('bg.jpg')]  text-white">
+
+      <div class="songlist w-[100%]">
+        <h1 class="md:text-xl text-sm font-bold md:ml-96">Best of NCS - No Copyright Songs</h1>
+        <div class="songItemContainer md:mt-8  ">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom flex flex-col justify-center text-white items-center h-20 bg-black fixed bottom-0 w-full">
+        <input type="range" class="w-[80vw] cursor-pointer items-center" name="range" value="0" id="myProgressBar" min="0" max="100">
+        <div class="icons mt-4 cursor-pointer space-x-2 md:space-x-1">
+            <i id="previous" class="fa-solid fa-backward-step fa-2xl md:fa-2xl"></i>
+            <i id="masterPlay" class="fa-regular fa-circle-play fa-2xl md:fa-2xl"></i>
+            <i id="next" class="fa-solid fa-forward-step fa-2xl md:fa-2xl"></i>
+          </div>
+
+          <div class="songInfo flex font-bold absolute md:left-[10vw] md:bottom-5 left-[5vw] bottom-[-15px] text-[10px] md:text-sm">
+            <img id="gif" class="w-10 opacity-0 transition-opacity duration-700 ease-in" src="/assets/playing-21ed257b.gif" alt="">
+            <span id="masterSongName">Maan Meri Jaan</span>
+          </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
