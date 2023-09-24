@@ -7,7 +7,6 @@ const cors = require('cors')
 const exphbs = require('express-handlebars');
 const path = require("path")
 
-
 databaseConnect()
 
 app.use(express.json()); 
