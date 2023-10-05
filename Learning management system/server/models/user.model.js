@@ -3,7 +3,6 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
 
-
 const userSchema = new Schema({
     fullName: {
         type: String,
@@ -45,18 +44,16 @@ const userSchema = new Schema({
     },
     forgotPasswordToken: String,
     forgotPasswordExpiry: Date
-
 }, {
     timestamps: true
-})
+});
 
 userSchema.pre('save', async function(next){
     if (!this.isModified('password')) {
-        return next()
+        return next();
     } 
-    this.password = await bcrypt.hash(this.password, 10)
-    
-})
+    this.password = await bcrypt.hash(this.password, 10);
+});
 
 userSchema.methods = {
     generateJWTToken: async function () {
@@ -66,22 +63,26 @@ userSchema.methods = {
             {
                 expiresIn: process.env.JWT_EXPIRY
             }
-        )
+        );
     },
     comparePassword: async function (plainTextPassword) {
-        return await bcrypt.compare(plainTextPassword, this.password)
+        return await bcrypt.compare(plainTextPassword, this.password);
     },
-    generatePasswordResetToken: async function() {
+    generatePasswordResetToken: async function () {
         const resetToken = crypto.randomBytes(20).toString("hex");
         this.forgotPasswordToken = crypto
-        .createHash("sha256")
-        .update(resetToken)
-        .digest("hex");
+            .createHash("sha256")
+            .update(resetToken)
+            .digest("hex");
+    
+        this.forgotPasswordExpiry = Date.now() + 15 * 60 * 1000;
+        
+        await this.save(); // Save the changes to the database
+        
+        return resetToken; // Return the generated resetToken
+    }    
+};
 
-        this.forgotPasswordExpiry = Date.now() + 15 * 60 * 1000
-    }
-}
-
-const User = model('User', userSchema)
+const User = model('User', userSchema);
 
 export default User;
