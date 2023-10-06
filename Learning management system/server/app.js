@@ -6,6 +6,8 @@ import cookieParser from 'cookie-parser'
 import morgan from "morgan"
 import userRoutes from './routes/user.routes.js'
 import errorMiddleware from "./middlewares/error.middleware.js"
+import courseRoutes from './routes/course.routes.js'
+
 const app = express()
 
 config()
@@ -28,6 +30,7 @@ app.use('/ping', function(req,res){
 //  Routes of 3 modules
 
 app.use('/api/v1/user', userRoutes)
+app.use('/api/v1/courses', courseRoutes)
 
 app.all('*', (req,res) => {
     res.status(404).send('OOPS!! 404 page not found')
